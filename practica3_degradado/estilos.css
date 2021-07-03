@@ -1,0 +1,34 @@
+.caja_contenedora{
+    width: 700px;
+    height: 500px;
+    /*position relativa es para que el siguiente pseudoelemento se posiciones sobre este*/
+    position:relative;
+    /*radial gradient circular que inicia en 10% derecha y abajo, inicia a degradar el azul desde 0% y negro a partir del 30%*/
+    background:radial-gradient(circle at 20% 20% , rgba(2, 64, 88, 0.95) 0%, rgba(36, 36, 36, 1) 30%);
+}
+
+.caja_contenedora:before{
+    content:"";
+    width: 100%;
+    height: 100%;
+    /*position absolute es para que este elemento se posicione sobre el anterior*/
+    position:absolute;
+    /*radial gradient circular que inicia en 90% derecha y abajo, inicia a degradar el rosa desde 10% y NADA a partir del 30%,
+     de esta manera no oculta los colores de abajo*/
+    background: radial-gradient(circle at 90% 90%, rgba(255, 13, 239, 0.3) 10%, rgba(36, 36, 36,0) 30%) ;
+}
+
+.caja_informacion{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.caja1, .caja2{
+    border:1px solid white;
+    width: 200px;
+    height: 100px;
+}
